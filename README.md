@@ -25,17 +25,22 @@ food-not-food-classifier/
 ## 🚀 Quick Start
 
 ### 1️⃣ Clone the repo
-```bash
+```
 git clone https://github.com/<your-username>/food-not-food-classifier.git
 cd food-not-food-classifier
-2️⃣ Install dependencies
-bash
-Copy code
+```
+
+### 2️⃣ Install dependencies
+```
 pip install -r requirements.txt
-3️⃣ Train (optional)
+```
+
+### 3️⃣ Train (optional)
 To retrain the model:
 
+```
 python foodnotfoodtextclassification.py
+```
 
 This will:
 
@@ -47,16 +52,18 @@ Fine-tune DistilBERT for 10 epochs
 
 Save the model to models/food_not_food_text_classifier_base_uncased/
 
-4️⃣ Launch the demo
-bash
-Copy code
+### 4️⃣ Launch the demo
+
+```
 cd demos/food_not_food_classifier
 python app.py
+```
+
 Open the local URL to interact with the Gradio interface.
 
-🧩 Usage in Python
-python
-Copy code
+### 🧩 Usage in Python
+
+```
 from transformers import pipeline
 
 classifier = pipeline(
@@ -66,14 +73,16 @@ classifier = pipeline(
 
 classifier("A bowl of strawberries sat on the counter, glistening with water.")
 # [{'label': 'food', 'score': 0.98}]
-📊 Results
+```
+
+### 📊 Results
 Metric	Value
 Test Accuracy	~95 %
 Training Epochs	10
 Batch Size	32
 Inference Speed	~0.02 s per sentence (GPU)
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 Python 3.10
 
 PyTorch
@@ -84,11 +93,11 @@ Gradio (web demo)
 
 Hugging Face Hub (model hosting)
 
-🤝 Contributing
+### 🤝 Contributing
 Issues and pull requests are welcome!
 For major changes, please open an issue first to discuss what you’d like to change.
 
-📜 License
+### 📜 License
 Apache-2.0
 
 Live Demo: Hugging Face Space
